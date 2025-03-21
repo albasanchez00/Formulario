@@ -65,7 +65,7 @@ header{
     height: var(--altura_header);
     background-color: var(--color_fondo);
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     color: white;
     .picture_header{
@@ -156,13 +156,12 @@ header{
 }
 
 .hero_content h1, .hero_content_futbol h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
+    font-size: 1.6em;
     color: var(--color_blanco);
 }
 
 .hero_content p, .hero_content_futbol p {
-    font-size: 1.2em;
+    font-size: 1em;
     color: var(--color_blanco);
 }
 
@@ -239,7 +238,7 @@ header{
             align-items: flex-start;
             min-width: 100%;
             input{
-                min-width: 100%;
+                min-width: 400px;
                 max-height: 35px;
                 padding: 10px;
                 margin: 10px 0;
@@ -265,6 +264,15 @@ header{
 
 /*  */
 .main_Servicios{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    height: auto;
+    padding: 20px;
+}
+.section_servicioCliente{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -424,6 +432,79 @@ header{
 }
 /*  */
 
+
+/* INICIO PAGINA CONTACTO */
+.section_form_2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-width: 70%;
+    margin-top: 20px;
+    background-color: var(--color_blanco);
+    border-radius: 30px;
+    box-shadow: -6px 5px 5px 0px rgba(199,199,199,0.75);
+    -webkit-box-shadow: -6px 5px 5px 0px rgba(199,199,199,0.75);
+    -moz-box-shadow: -6px 5px 5px 0px rgba(199,199,199,0.75);
+    picture{
+        max-width: 30%;
+        height: auto;
+        img{
+            width:80%;
+            height: auto;
+            border-radius: 20px;
+        }
+    }
+    #formulario{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-width: 60%;
+        height: auto;
+        padding: 15px 0;
+        h1{
+            font-size: 30px;
+            color: var(--color-primary-button);
+            padding: 10px;  
+        }
+        p{
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            font-size: 18px;
+            input{
+                height: 45px;
+                width: 600px;
+                margin: 5px 0;
+                border-radius: 20px;
+                border: 0.5px solid var(--color-primary-button);
+                background-color: rgb(255, 255, 255);
+                font-size: 16px;
+                padding: 0 10px;
+            }
+            button {
+                cursor: pointer; 
+                border: 0px solid rgba(50, 199, 162, 0.35); 
+                font-size: 15px; 
+                color: var(--color_blanco); 
+                padding: 10px 30px; 
+                width: 200px; 
+                box-shadow: rgb(146, 255, 216) -6px 5px 19px -5px; 
+                border-radius: 50px; 
+                background: var(--color-primary-button);
+            }
+            button:hover{   
+                color: black;
+                width: 205px;
+                background: var(--color-secundary-button);
+                border: 1px solid var(--color-primary-button);
+            }
+        }   
+    }
+}
+
+/* FIN PAGINA CONTACTO */
 
 
 

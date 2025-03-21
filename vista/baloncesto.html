@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pista de Baloncesto</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <section class="contenedor_futbol">
+        <header>
+            <picture class="picture_header"><img src="./media/logo-polideportivo.svg" alt=""></picture>
+            <section class="section_nav">
+                <div class="menu-toggle" id="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <nav class="nav-cabecera">
+                    <ul class="nav-links" id="nav-links">
+                        <li><a href="../index.html" class="menu">Inicio</a></li>
+                        <li><a href="./futbol.html" class="menu">Futbol</a></li>
+                        <li><a href="./baloncesto.html" class="menu">Baloncesto</a></li>
+                        <li><a href="./padel.html" class="menu">Padel</a></li>
+                        <li><a href="./vista/contacto.html" class="menu">Contacto</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </header>
+
+
+
+        <main class="main_Servicios">
+            <section class="section_hero_futbol">
+                <div class="hero_content_futbol">
+                    <h1>Reservar tu pista</h1>
+                    <form action="#" class="form_futbol">
+                        <p>
+                            <label for="nombre">Nombre</label>
+                            <input type="text" name="nombre" required>
+                        </p>
+                        <p>
+                            <label for="apellido">Apellidos</label>
+                            <input type="text" name="apellido">
+                        </p>
+                        <p>
+                            <label for="telefono">Nº Telefono</label>
+                            <input type="text" name="telefono" required>
+                        </p>
+                        <p>
+                            <label for="nTarjeta">Nº Tarjeta</label>
+                            <input type="text" name="nTarjeta" required>
+                        </p>
+                        <p>
+                            <label for="tipo-pista">Tipo de pista:</label>
+                            <select id="tipo-pista" name="tipo-pista" required>
+                                <option value="">-- Selecciona un campo de Baloncesto --</option>
+                                <option value="futbol-7">Campo exterior</option>
+                                <option value="futbol-11">Campo interior</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label for="fecha">Fecha</label>
+                            <input type="date" name="fecha" required>
+                        </p>
+                        <p>
+                            <label for="hora">Hora</label>
+                            <input type="time" name="hora" required>
+                        </p>
+                        <a href="#reserva" class="btn_reserva">Reservar ahora</a>
+                    </form>
+                </div>
+            </section>
+            <section class="section_servicioCliente">
+                <section class="resumen_Servicio_Iz">
+                    <div class="content_Servicio_Iz">
+                        <h2>Normas básicas de uso</h2>
+                        <p>Puntualidad obligatoria: 5 min. de cortesía.</p>
+                        <p>Uso obligatorio de calzado adecuado (no tacos metálicos).</p>
+                        <p>Respeta el tiempo de juego para no afectar al siguiente grupo.</p>
+                        <button>Descubre más</button>
+                    </div>
+                    <div class="img_servicio_Iz">
+                        <img src="./media/reglas-pista-futbol.svg" alt="reglas campo de futbol">
+                    </div>
+                </section>
+    
+                <!--  Section Gestor de Medicamentos  -->
+                <section class="resumen_Servicio_De">
+                    <div class="img_servicio_De">
+                        <img src="./media/reserva-pista-futbol.svg" alt="reserva de pistas">
+                    </div>
+                    <div class="content_Servicio_De">
+                        <h2>Tarifas</h2>
+                        <p>Precio por hora → 15€/H</p>
+                        <p>Partidos nocturnos → 20€/H</p>
+                        <button>Descubre más</button>
+                    </div>
+                </section>
+    
+                <!--  Section  Accesibilidad y Comodidad  -->
+                <section class="resumen_Servicio_Iz">
+                    <div class="content_Servicio_Iz">
+                        <h2>Horarios disponibles</h2>
+                        <p>Lunes a Domingo: de 07:00 a 23:00</p>
+                        <p>Máximo: 2 horas por grupo por día</p>
+                        <button>Descubre más</button>
+                    </div>
+                    <div class="img_servicio_Iz">
+                        <img src="./media/caracteristicas-pista-futbol.svg" alt="accesibilidad y comodidad">
+                    </div>
+                </section>   
+            </section>
+        
+        
+        
+        
+        </main>
+
+
+
+
+        <footer>
+            <section class="section_footer">
+                <picture class="picture_header"><img src="./media/logo-polideportivo.svg" alt=""></picture>
+                <section class="section_nav_footer">
+                    <nav>
+                        <ul>
+                            <li><a href="../index.html" class="menu">Inicio</a></li>
+                            <li><a href="./futbol.html" class="menu">Futbol</a></li>
+                            <li><a href="./baloncesto.html" class="menu">Baloncesto</a></li>
+                            <li><a href="./padel.html" class="menu">Padel</a></li>
+                            <li><a href="./vista/contacto.html" class="menu">Contacto</a></li>
+                        </ul>
+                    </nav>
+                </section>
+                <section class="section_nav_politics">
+                    <nav>
+                        <ul>
+                            <li><a href="#">Políticas Privacidad</a></li>
+                            <li><a href="#">Políticas de uso</a></li>
+                            <li><a href="#">Aviso Legal</a></li>
+                            <li><a href="#">Conocenos</a></li>
+                        </ul>
+                    </nav>
+                </section>
+            </section>
+        </footer>
+    </section>
+</body>
+</html>
