@@ -1,0 +1,468 @@
+/* INICIO AJUSTES GENERALES */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+a{
+    list-style: none;
+    color: var(--color_blanco);
+}
+a:hover{
+    color: var(--fondo-body);
+}
+strong{
+    color: rgb(233, 22, 22);
+}
+ul{
+    list-style: none;
+}
+.text_center{
+    text-align: center;
+}
+:root{
+    --altura_header:10vh;
+    --color_fondo: #00625d;
+    --color_primario: #176150;
+    --color_secundario: #1f826b;
+    --color_blanco: #ffffff;
+    --fondo-body: #f9f9f9;
+    --altura_footer:10vh;
+    --color-primary-button:#176150;
+    --color-secundary-button:#1f826b;
+}
+
+/* Asegura que `html` y `body` ocupen toda la altura */
+html, body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Oculta la barra de scroll en Chrome, Safari y Edge */
+main::-webkit-scrollbar {
+    display: none;
+}
+
+/* `main` crece para ocupar todo el espacio restante */
+main {
+    flex: 1;
+    padding: 20px;
+    overflow: auto; /* Evita el desbordamiento */
+}
+
+.contenedor_index {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Mínimo 100% del alto de la pantalla */
+}
+
+/* INICIO HEADER */
+header{
+    height: var(--altura_header);
+    background-color: var(--color_fondo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    .picture_header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25%;
+        img{
+            max-width: 70px;
+            height: auto;
+        }
+    }
+    .section_header{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        padding: 0 40px;
+    }
+    .section_nav{
+        width: 45%;
+        ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            li{
+                padding: 0 20px;
+            }
+        }
+    }
+}
+
+/* FIN HEADER */
+
+
+
+
+/* INICIO INDEX*/
+.section_hero, .section_hero_futbol {
+    width: 100%;
+    height: 80vh;
+    background-image: url('../vista/media/modern-multisports-center.svg'); /* Asegúrate de tener esta imagen o cambia el nombre */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    color: var(--color_blanco);
+    .btn_reserva {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 12px 30px;
+        background-color: var(--color-primary-button);
+        color: var(--color_blanco);
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        transition: background-color 0.3s ease;
+    }
+    
+    .btn_reserva:hover {
+        background-color: var(--color-secundary-button);
+        cursor: pointer;
+        text-decoration: none;
+    }
+}
+
+.section_hero::before, .section_hero_futbol::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Oscurece la imagen para mejor legibilidad del texto */
+    z-index: 1;
+}
+
+.hero_content, .hero_content_futbol {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero_content h1, .hero_content_futbol h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: var(--color_blanco);
+}
+
+.hero_content p, .hero_content_futbol p {
+    font-size: 1.2em;
+    color: var(--color_blanco);
+}
+
+
+/* Inicio Sección Features */
+.features-container, .features-container-futbol {
+    display: flex;
+    flex-wrap: wrap; /* Permite que se acomoden en varias filas si no caben */
+    justify-content: space-around; /* Distribución uniforme */
+    width: 100vw;
+    align-items: center;
+    background-color: var(--color_blanco); /* Color de fondo */
+    padding: 20px;
+    margin: 40px 0;
+}
+
+/* Estilos de cada característica */
+.feature, .feature-futbol {
+    width: 30%; /* 3 elementos por fila en escritorio */
+    text-align: center;
+    padding: 20px;
+}
+
+.feature img, .feature-futbol img {
+    width: 50px; /* Tamaño del icono */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.feature h3, .feature-futbol h3 {
+    color: var(--color-primary-button); /* Color naranja similar a la imagen */
+    font-size: 18px;
+}
+
+.feature p, .feature-futbol p {
+    color: var(--color-secundary-button); /* Texto en gris */
+    font-size: 14px;
+}
+
+/* 🔹 Responsive: Ajuste para móviles */
+@media screen and (max-width: 768px) {
+    .feature, .feature-futbol {
+        width: 45%; /* 2 por fila en pantallas medianas */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .feature, .feature-futbol {
+        width: 100%; /* 1 por fila en móviles */
+    }
+}
+/* Fin Sección Features */
+
+/* FIN INDEX */
+
+
+/* INICIO FORMULARIOS */
+/* Formulario Campo Futbol */
+.contenedor_futbol{
+    .form_futbol{
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        min-height: 100%;
+        padding: 20px;
+        p{
+            font-size: 14px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            min-width: 100%;
+            input{
+                min-width: 100%;
+                max-height: 35px;
+                padding: 10px;
+                margin: 10px 0;
+                border: 1px solid var(--color_primario);
+                border-radius: 5px;
+            }
+            select{
+                min-width: 100%;
+                max-height: 35px;
+                padding: 10px;
+                margin: 10px 0;
+                border: 1px solid var(--color_primario);
+                border-radius: 5px;
+                option{
+                    font-size: 12px;
+                }
+            }
+        }
+        
+    }
+}
+/* Formulario Campo Futbol */
+
+/*  */
+.main_Servicios{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    height: auto;
+    padding: 20px;
+}
+/* 📌 Imagen a la izquierda, texto a la derecha */
+.resumen_Servicio_De {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 40px;
+    width: 80%;
+    padding: 30px;
+    margin: 20px 0;
+    background-color: var(--color_blanco);
+    border-radius: 30px;
+    box-shadow: -6px 5px 5px 0px rgba(199,199,199,0.75);
+    -webkit-box-shadow: -6px 5px 5px 0px rgba(199,199,199,0.75);
+    -moz-box-shadow: -6px 5px 5px 0px rgba(199,199,199,0.75);
+    .img_servicio_De{
+        width: 40%; /* Ajusta según tu imagen */
+        max-width: 100%;
+        height: auto;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .content_Servicio_De {
+        max-width: 500px;
+        h2 {
+            font-size: 28px;
+            color: var(--color-primary-button); /* Azul oscuro */
+            margin-bottom: 15px;
+        }
+        p {
+            font-size: 18px;
+            color: var(--color-secundary-button);
+            padding: 10px 0;
+        }
+        button {
+            background-color: #E8ECEF;
+            color: #005670;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition:  0.3s ease-in-out;
+        }
+        button:hover {
+            background-color: #D1D5D8;
+        }
+    }
+}
+/* 🔹 Responsive: Ajuste en móviles */
+@media screen and (max-width: 1022px) {
+    .resumen_Servicio {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .img_servicio{
+        width: 40%; /* Ajusta según tu imagen */
+        max-width: 100%;
+        height: auto;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .content_Servicio {
+        max-width: 100%;
+    }
+}
+
+/* 📌 Imagen a la Derecha, texto a la Izquierda */
+.resumen_Servicio_Iz {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 40px;
+    padding: 50px;
+    width: 80%;
+    background-color: var(--color_blanco);
+    border-radius: 30px;
+    box-shadow: -6px 5px 5px 0px rgba(199,199,199,0.75);
+    -webkit-box-shadow: -6px 5px 5px 0px rgba(199,199,199,0.75);
+    -moz-box-shadow: -6px 5px 5px 0px rgba(199,199,199,0.75);
+    .img_servicio_Iz{
+        width: 40%; /* Ajusta según tu imagen */
+        max-width: 100%;
+        height: auto;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .content_Servicio_Iz {
+        max-width: 500px;
+        div{
+            margin-left: 40px;
+        }
+        h2 {
+            font-size: 28px;
+            color: var(--color-primary-button); /* Azul oscuro */
+            margin-bottom: 15px;
+        }
+        p {
+            font-size: 18px;
+            color: var(--color-secundary-button);
+            padding: 10px 0;
+        }
+        button {
+            background-color: #E8ECEF;
+            color: #005670;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+        }  
+        button:hover {
+            background-color: #D1D5D8;
+        }
+    }
+    .reverse {
+        flex-direction: row-reverse; /* Invierte el orden */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        padding: 30px;
+        margin: 20px 0;
+    }
+}
+
+/* 🔹 Responsive: Ajuste en móviles */
+@media screen and (max-width: 768px) {
+    .calendar-section {
+        flex-direction: column; /* En móviles, imagen y texto en columna */
+        text-align: center;
+    }
+
+    .calendar-image img {
+        width: 90%;
+    }
+
+    .calendar-content {
+        max-width: 100%;
+    }
+}
+/*  */
+
+
+
+
+
+
+
+
+/* INICIO FOOTER */
+footer{
+    height: var(--altura_footer);
+    background-color: var(--color_fondo);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    picture img{
+        width: 60px;
+        height: auto;
+    }
+    .section_footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        flex-wrap: nowrap;
+    }
+}
+.section_nav_footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+/* FIN FOOTER */
